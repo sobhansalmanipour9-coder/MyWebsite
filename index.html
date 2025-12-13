@@ -3,185 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سایت شخصی سبهان</title>
+  <title>سایت شخصی سبحان</title>
+
+  <!-- فونت فارسی -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- آیکن -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: Tahoma, sans-serif;
+      font-family: 'Vazirmatn', sans-serif;
       background-color: #f4f6f8;
       color: #333;
     }
 
-    /* منو */
     nav {
       position: sticky;
       top: 0;
-      background-color: #222;
+      background: #111;
       padding: 15px;
       text-align: center;
       z-index: 1000;
     }
 
     nav a {
-      color: #fff;
+      color: white;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
+      font-weight: 600;
     }
 
-    nav a:hover {
-      color: #4CAF50;
-    }
+    nav a:hover { color: #4CAF50; }
 
-    /* هدر */
     header {
-      background: linear-gradient(120deg, #4CAF50, #2e7d32);
+      background: linear-gradient(120deg, #43cea2, #185a9d);
       color: white;
-      padding: 80px 20px;
       text-align: center;
+      padding: 100px 20px;
+      animation: fadeIn 1.5s ease;
     }
 
-    header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+    header h1 { font-size: 42px; }
+    header p { font-size: 18px; opacity: 0.9; }
 
-    header p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
-
-    /* بخش‌ها */
     section {
-      padding: 60px 20px;
+      padding: 70px 20px;
       text-align: center;
+      animation: fadeUp 1.5s ease;
     }
 
-    section h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
+    h2 { font-size: 32px; margin-bottom: 25px; }
 
-    section p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 17px;
-      line-height: 1.8;
-    }
-
-    /* کارت‌ها */
     .cards {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
       flex-wrap: wrap;
-      margin-top: 40px;
     }
 
     .card {
-      background-color: white;
-      width: 250px;
+      background: white;
+      width: 260px;
       padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
 
-    .card h3 {
-      margin-bottom: 10px;
+    .card:hover { transform: translateY(-10px); }
+
+    .card i {
+      font-size: 35px;
       color: #4CAF50;
+      margin-bottom: 15px;
     }
 
-    /* دکمه */
     .btn {
       display: inline-block;
       margin-top: 25px;
-      padding: 12px 25px;
-      background-color: #4CAF50;
+      padding: 12px 30px;
+      background: #4CAF50;
       color: white;
-      text-decoration: none;
       border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
     }
 
-    .btn:hover {
-      background-color: #388e3c;
+    .btn:hover { background: #388e3c; }
+
+    form {
+      max-width: 400px;
+      margin: auto;
     }
 
-    /* فوتر */
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+
     footer {
-      background-color: #222;
+      background: #111;
       color: #aaa;
       text-align: center;
       padding: 20px;
-      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 32px; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- منو -->
-  <nav>
-    <a href="#home">خانه</a>
-    <a href="#about">درباره من</a>
-    <a href="#skills">مهارت‌ها</a>
-    <a href="#contact">تماس</a>
-  </nav>
+<nav>
+  <a href="#home">خانه</a>
+  <a href="#about">درباره من</a>
+  <a href="#projects">پروژه‌ها</a>
+  <a href="#contact">تماس</a>
+</nav>
 
-  <!-- هدر -->
-  <header id="home">
-    <h1>سلام! من سبهان هستم 👋</h1>
-    <p>برنامه‌نویس در حال یادگیری و سازنده سایت‌های خفن 😎</p>
-    <a href="#about" class="btn">بیشتر بشناس</a>
-  </header>
+<header id="home">
+  <h1>سلام! من سبحان هستم 👋</h1>
+  <p>سازنده سایت و برنامه‌نویس در مسیر حرفه‌ای شدن 🚀</p>
+  <a href="#projects" class="btn">دیدن پروژه‌ها</a>
+</header>
 
-  <!-- درباره من -->
-  <section id="about">
-    <h2>درباره من</h2>
-    <p>
-      من علاقه‌مند به برنامه‌نویسی و ساخت سایت هستم.
-      این سایت رو ساختم تا یادگیری‌هام، تمرین‌هام و پروژه‌هام رو اینجا قرار بدم.
-    </p>
-  </section>
+<section id="about">
+  <h2>درباره من</h2>
+  <p>من عاشق برنامه‌نویسی و ساخت سایت‌های حرفه‌ای هستم و اینجا مسیر پیشرفتم رو ثبت می‌کنم.</p>
+</section>
 
-  <!-- مهارت‌ها -->
-  <section id="skills">
-    <h2>مهارت‌ها</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>HTML</h3>
-        <p>ساخت ساختار سایت و صفحات وب</p>
-      </div>
-      <div class="card">
-        <h3>CSS</h3>
-        <p>طراحی زیبا و حرفه‌ای سایت</p>
-      </div>
-      <div class="card">
-        <h3>در حال یادگیری</h3>
-        <p>JavaScript و Python</p>
-      </div>
+<section id="projects">
+  <h2>پروژه‌ها</h2>
+  <div class="cards">
+    <div class="card">
+      <i class="fa-solid fa-globe"></i>
+      <h3>سایت شخصی</h3>
+      <p>سایت معرفی و نمونه‌کار</p>
     </div>
-  </section>
+    <div class="card">
+      <i class="fa-solid fa-code"></i>
+      <h3>تمرین‌های کدنویسی</h3>
+      <p>HTML, CSS, JS</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-rocket"></i>
+      <h3>پروژه‌های آینده</h3>
+      <p>در حال توسعه 🚧</p>
+    </div>
+  </div>
+</section>
 
-  <!-- تماس -->
-  <section id="contact">
-    <h2>تماس با من</h2>
-    <p>می‌تونی از طریق ایمیل یا شبکه‌های اجتماعی با من در ارتباط باشی.</p>
-    <a href="#" class="btn">ارسال پیام</a>
-  </section>
+<section id="contact">
+  <h2>تماس با من</h2>
+  <form>
+    <input type="text" placeholder="نام">
+    <input type="email" placeholder="ایمیل">
+    <textarea rows="4" placeholder="پیام"></textarea>
+    <button class="btn" type="submit">ارسال</button>
+  </form>
+</section>
 
-  <!-- فوتر -->
-  <footer>
-    © 2025 | ساخته شده با ❤️ توسط سبهان
-  </footer>
+<footer>
+  © 2025 | ساخته شده با ❤️ توسط سبحان
+</footer>
 
 </body>
 </html>
-
- 
