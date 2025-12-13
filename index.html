@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>سایت شخصی سبحان</title>
 
-  <!-- فونت فارسی -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-  <!-- آیکن -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -44,7 +41,15 @@
       color: white;
       text-align: center;
       padding: 100px 20px;
-      animation: fadeIn 1.5s ease;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-bottom: 20px;
     }
 
     header h1 { font-size: 42px; }
@@ -53,7 +58,6 @@
     section {
       padding: 70px 20px;
       text-align: center;
-      animation: fadeUp 1.5s ease;
     }
 
     h2 { font-size: 32px; margin-bottom: 25px; }
@@ -95,35 +99,11 @@
 
     .btn:hover { background: #388e3c; }
 
-    form {
-      max-width: 400px;
-      margin: auto;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-family: inherit;
-    }
-
     footer {
       background: #111;
       color: #aaa;
       text-align: center;
       padding: 20px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
@@ -142,14 +122,18 @@
 </nav>
 
 <header id="home">
+  <img src="profile.jpg" alt="عکس سبحان">
   <h1>سلام! من سبحان هستم 👋</h1>
-  <p>سازنده سایت و برنامه‌نویس در مسیر حرفه‌ای شدن 🚀</p>
+  <p>برنامه‌نویس و سازنده سایت‌های حرفه‌ای 🚀</p>
   <a href="#projects" class="btn">دیدن پروژه‌ها</a>
 </header>
 
 <section id="about">
   <h2>درباره من</h2>
-  <p>من عاشق برنامه‌نویسی و ساخت سایت‌های حرفه‌ای هستم و اینجا مسیر پیشرفتم رو ثبت می‌کنم.</p>
+  <p>
+    من سبحان هستم و به برنامه‌نویسی و طراحی سایت علاقه‌مندم.
+    این سایت رو ساختم تا مسیر یادگیری و پروژه‌هام رو به اشتراک بذارم.
+  </p>
 </section>
 
 <section id="projects">
@@ -175,12 +159,7 @@
 
 <section id="contact">
   <h2>تماس با من</h2>
-  <form>
-    <input type="text" placeholder="نام">
-    <input type="email" placeholder="ایمیل">
-    <textarea rows="4" placeholder="پیام"></textarea>
-    <button class="btn" type="submit">ارسال</button>
-  </form>
+  <a href="#" class="btn">ارسال پیام</a>
 </section>
 
 <footer>
@@ -189,3 +168,4 @@
 
 </body>
 </html>
+
